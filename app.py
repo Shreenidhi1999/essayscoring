@@ -13,7 +13,7 @@ def essay_score():
     return prediction
 
 def main():
-    st.tilte("Automated Essay Scorer")
+    st.title("Automated Essay Scorer")
     html_temp="""
     <h2 style="color:red"> The essay to be written in 500 words only</h2>
     <h2> Prompt 1</h2> 
