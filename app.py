@@ -9,7 +9,7 @@ regressor=pickle.load(pickle_a)
 def welcome():
     return "Welcome to my webapp"
 def essay_score(essay):
-    prediction=regressor.predict(essay)
+    prediction=regressor.predict(essay).reshape(-1,1)
     return prediction
 
 def main():
