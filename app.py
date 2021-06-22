@@ -8,8 +8,8 @@ regressor=pickle.load(pickle_a)
 
 def welcome():
     return "Welcome to my webapp"
-def essay_score(essay):
-    prediction=regressor.predict(essay).reshape(1,-1)
+def essay_score(prompt_number,essay):
+    prediction=regressor.predict(prompt_number,essay)
     return prediction
 
 def main():
@@ -34,7 +34,7 @@ def main():
     essay=st.text_input("Input your essay")
     result=""
     if st.button("Predict Score"):
-        result=essay_score(essay).reshape(1,-1)
+        result=essay_score(prompt_number,essay)
     st.success("The marks out of 5 is:{}".format(result))
 if __name__=="__main__":
      main()
