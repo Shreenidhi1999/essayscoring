@@ -9,7 +9,7 @@ regressor=pickle.load(pickle_a)
 def welcome():
     return "Welcome to my webapp"
 def essay_score(prompt_number,essay):
-    essay=essay.to_bytes()
+    essay=float(str(essay))
     prediction=regressor.predict([[prompt_number,essay]])
     return prediction
 
